@@ -234,7 +234,7 @@ document.addEventListener('DOMContentLoaded', () => {
             imgMain = document.querySelector('.product-card-slider');
             img.onload = function() {
             };
-            img.src = '/img/GAMMA-DIRECT/1.webp';
+            img.src = 'img/GAMMA-DIRECT/1.webp';
             imgMain.style.height = `${Math.round(imgMain.offsetWidth*(img.height / img.width))}px`;
 
             function indicatorsCardSCalculation(directionStart, direction, sizeImg, sizeImgStart) {
