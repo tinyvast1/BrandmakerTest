@@ -1,0 +1,340 @@
+.product-card
+    margin-top: 32px
+    &__container
+        display: grid
+        grid-template-columns: 8fr 4fr
+        gap: 0 30px
+
+.product-card-slider
+    position: relative
+    min-height: auto
+    &__items
+        display: flex
+        flex-direction: column
+        gap: 24px 0
+    &__item
+        min-width: 100%
+        &-main
+            position: relative
+    &__img
+        width: 100%
+        height: 100%
+        object-fit: cover
+    &__dots
+        position: absolute
+        min-width: 40px
+        height: 22px
+        background: #000000
+        opacity: 0
+        border-radius: 50px
+        bottom: 12px
+        left: 50%
+        transform: translateX(-50%)
+        z-index: 0
+        padding: 8px
+        display: flex
+        gap: 6px
+        align-items: center
+    &__dot
+        width: 6px
+        height: 6px
+        border-radius: 100%
+        background: #FFFFFF
+        opacity: 0.5
+        transition: all .5s
+        &-active
+            width: 8px
+            height: 8px
+            opacity: 1
+.indicators-card
+    &__item
+        position: absolute
+    &__number
+        position: absolute
+        z-index: 100
+        cursor: pointer
+        width: 21px
+        height: 21px
+        display: flex
+        align-items: center
+        justify-content: center
+        background: #FFDA00
+        border-radius: 100%
+        font-weight: 700
+        font-size: 11px
+        line-height: 150%
+    &__information
+        position: absolute
+        opacity: 0
+        top: 25px
+        margin-top: 4px
+        padding: 12px 0 0 16px
+        min-width: 170px
+        min-height: 68px
+        background: #414140
+        transition: all .5s
+        z-index: 10
+        &-active
+            opacity: 0.85
+    &__title
+        font-weight: 400
+        font-size: 14px
+        line-height: 150%
+        color: #F5F7F9
+    &__price
+        font-weight: 750
+        font-size: 14px
+        line-height: 150%
+        color: #FFDA00
+        span
+            color: #FFDA00
+.indicators-card__item
+    &:nth-child(4)
+        .indicators-card__information
+            top: 0
+            left: 25px
+    &:nth-child(3)
+        .indicators-card__information
+            top: 0
+            left: 25px
+            transform: translate(0, -50%)
+    &:nth-child(5)
+        .indicators-card__information
+            top: 10px
+            left: 0
+            transform: translate(-40%, 0)
+    &:nth-child(2)
+        .indicators-card__information
+            left: 0
+            top: 10px
+            transform: translate(-50%, 0)
+    &:nth-child(6)
+        .indicators-card__information
+            left: 0
+            top: 0
+            transform: translate(-100%, -100%)
+
+.availability
+    top: 10px
+    right: 20px
+    position: absolute
+    min-width: 118px
+    height: 27px
+    background-color: #fff
+    display: flex
+    align-items: center
+    justify-content: space-between
+    padding: 0 12px 0 12px
+    &__indicators
+        width: 8px
+        height: 8px
+        border-radius: 100%
+        &-true
+            background-color: #27AE60
+        &-false
+            background-color: #F44037
+    &__text
+        font-weight: 700
+        font-size: 12px
+        line-height: 120%
+        letter-spacing: 0.05em
+        text-transform: uppercase
+        margin-left: 8px
+
+.application
+    &__title
+        text-align: left
+.deliver
+    margin-top: 29px
+    display: flex
+    justify-content: center
+    align-items: center
+    margin-left: auto
+    position: relative
+    width: 342px
+    min-height: 48px
+    padding: 13px 0
+    background: #F5F7F9
+    &__img
+        position: absolute
+        height: 100%
+        top: 0
+        left: 0
+        transform: translateX(-50%)
+    &__text
+        font-size: 14px
+        line-height: 150%
+        font-weight: 700
+        display: flex
+        span
+            display: block
+            font-weight: 400
+
+.equipment
+    &__items
+        margin-top: 24px
+        display: grid
+
+    &__item
+        width: 100%
+        min-height: 47px
+        display: grid
+        grid-template-columns: 21px auto 46px
+        align-items: center
+        padding: 0 11px
+        &:nth-child(odd)
+            background-color: #fff
+        &:nth-child(even)
+            background-color: #F5F7F9
+
+    &__indicators
+        width: 21px
+        height: 21px
+        display: flex
+        justify-content: center
+        align-items: center
+        font-weight: 700
+        font-size: 11px
+        background: #FFDA00
+        border-radius: 100%
+
+    &__information
+        display: flex
+        margin-left: 8px
+        margin-right: 22px
+        flex-wrap: wrap
+
+    &__title
+        font-weight: 400
+        font-size: 14px
+        line-height: 150%
+        margin-right: auto
+
+    &__price
+        font-weight: 700
+        font-size: 14px
+        line-height: 150%
+
+    &__quantity
+        display: flex
+        height: 25px
+        width: 46px
+
+    &__quantity-input
+        width: 25px
+        height: 25px
+        margin-left: auto
+        border: 1px solid rgba(65, 65, 64, 0.1)
+        text-align: center
+        font-weight: 400
+        font-size: 14px
+        line-height: 150%
+
+    // &__quantity-btns
+
+    &__quantity-btn
+        border: 1px solid rgba(65, 65, 64, 0.1)
+        height: 50%
+        background: #ECECEC
+        opacity: 0.5
+        display: flex
+        justify-content: center
+        align-items: center
+        border-left: none
+        width: 19px
+        cursor: pointer
+        &-plus
+            border-bottom: none
+            img
+                transform: rotate(-90deg)
+        &-minus
+            img
+                transform: rotate(90deg)
+
+    &__footnote
+        font-weight: 400
+        font-size: 12px
+        line-height: 150%
+        opacity: 0.6
+        margin-top: 8px
+        text-align: right
+.total-price
+    margin-top: 8px
+    width: 100%
+    display: flex
+    justify-content: space-between
+    align-items: center
+    &__title
+        font-weight: 400
+        font-size: 14px
+        line-height: 150%
+        white-space: nowrap
+    &__value
+        white-space: nowrap
+        font-weight: 700
+        font-size: 28px
+        line-height: 150%
+        transition: all .5s
+    &__notify
+        opacity: 0
+        display: none
+        width: 126px
+        font-weight: 400
+        font-size: 12px
+        line-height: 150%
+        text-decoration: underline
+        text-decoration-skip-ink: none
+        opacity: 0.6
+        margin-right: 17px
+        transition: all .5s
+        &-active
+            display: block
+            opacity: 1
+    &__hint
+        opacity: 0
+        display: none
+        background: rgba(252, 63, 29, 0.04)
+        border: 1px solid rgba(252, 63, 29, 0.16)
+        align-items: center
+        justify-content: space-between
+        padding: 0 12px
+        height: 48px
+        width: 201px
+        transition: all .5s
+        &-active
+            opacity: 1
+            display: flex
+    &__hint-text
+        font-weight: 400
+        font-size: 10px
+        line-height: 130%
+
+    // &__hint-img
+
+.call
+    margin-top: 32px
+    display: grid
+    grid-template-columns: 17px auto
+    gap: 4px 8px
+    grid-template-areas: 'img title' 'none phone'
+    &__img
+        grid-area: img
+        align-self: flex-start
+        align-self: center
+    &__title
+        grid-area: title
+        font-weight: 400
+        font-size: 16px
+        line-height: 150%
+    &__phone
+        grid-area: phone
+        font-weight: 700
+        font-size: 24px
+        line-height: 150%
+        text-decoration: underline
+        text-decoration-skip-ink: none
+        justify-self: start
+
+
+
+

@@ -1,0 +1,76 @@
+.modal
+    position: fixed
+    top: -100%
+    left: 0
+    z-index: 1000
+    transition: all .8s
+    &-active
+        top: 0
+    &__overlay
+        width: 100vw
+        height: 100vh
+        background-color: #000
+        opacity: 0.5
+        top: 0
+        left: 0
+    &__wrapper
+        position: absolute
+        top: 50%
+        left: 50%
+        transform: translate(-50%, -50%)
+        width: 370px
+        min-height: 390px
+        background: #fff
+        padding: 32px 32px 0 32px
+    &__close
+        position: absolute
+        cursor: pointer
+        top: 16px
+        right: 16px
+    &__title
+        font-weight: 700
+        font-size: 28px
+        line-height: 110%
+    &__text
+        margin-top: 4px
+        font-weight: 400
+        font-size: 16px
+        line-height: 150%
+    &__form
+        margin-top: 24px
+    &__input
+        width: 100%
+        height: 48px
+        font-weight: 400
+        font-size: 16px
+        line-height: 20px
+        background: #FFFFFF
+        border: 1px solid rgba(65, 65, 64, 0.1)
+        padding: 15px 15px 15px 48px
+        background: url(/icons/flagRu.svg) no-repeat scroll 15px 15px
+    &__btn
+        margin-top: 8px
+        width: 100%
+        height: 46px
+        display: flex
+        justify-content: center
+        align-items: center
+        background: #FFDA00
+        font-weight: 700
+        font-size: 16px
+        line-height: 20px
+        border: none
+        cursor: pointer
+.privacy-policy
+    margin-top: 18px
+    &__text
+        font-weight: 400
+        font-size: 11px
+        line-height: 150%
+        opacity: .5
+    &__link
+        text-decoration: underline
+        text-decoration-skip-ink: none
+        opacity: .5
+
+
